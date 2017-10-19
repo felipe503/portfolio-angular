@@ -7,7 +7,8 @@ export class EducationService {
   constructor(public http:Http) { }
 
   getEducationData(){
-    return this.http.get('http://localhost/portfolio/api/education').map(res => res.json());
+    //return this.http.get('http://localhost/portfolio/api/education').map(res => res.json());
+    return this.http.get('../../../assets/json/education.json').map(res => res.json());
   }
 
 }

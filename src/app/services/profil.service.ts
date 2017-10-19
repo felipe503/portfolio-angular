@@ -7,7 +7,8 @@ export class ProfilService {
     console.log('ProfilService connected...');
   }
   getProfilData(){
-    return this.http.get('http://localhost/portfolio/api/profil').map(res => res.json());
+    //return this.http.get('http://localhost/portfolio/api/profil').map(res => res.json());
+    return this.http.get('../../../assets/json/profil.json').map(res => res.json());
   }
 
 }
