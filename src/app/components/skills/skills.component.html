@@ -1,0 +1,7 @@
+<div class="container">
+  <h2>Compétences techniques</h2>
+  <ul class="" *ngFor="let data of data">
+    <li class="" *ngIf="data.field_link==''">{{data.title}}</li>
+    <li class="" *ngIf="data.field_link!=''">{{data.title}}, <a href="{{data.field_link}}" target="_blank">{{data.field_link}}</a></li>
+  </ul>
+</div>

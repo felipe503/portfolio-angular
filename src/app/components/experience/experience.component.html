@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Expériences professionnelles</h2>
+  <ul class="list-unstyled">
+    <li *ngFor="let data of data">
+      <dl class="">
+        <dt>{{data.field_experiece_date}}</dt>
+        <dd>{{data.title}}</dd>
+        <dd>{{data.field_project_name}}</dd>
+        <dd *ngIf="data.field_url!=''"><a href="{{data.field_url}}" target="_blank">Website</a></dd>
+      </dl>
+    </li>
+  </ul>
+</div>
