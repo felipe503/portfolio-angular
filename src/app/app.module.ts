@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ProfilComponent } from './components/profil/profil.component';
@@ -14,7 +15,13 @@ import { LanguagesService } from './services/languages.service';
 import { SkillsService } from './services/skills.service';
 import { EducationService } from './services/education.service';
 import { ExperienceService } from './services/experience.service';
+import { CvComponent } from './components/cv/cv.component';
+import { HomeComponent } from './components/home/home.component';
 
+const appRoutes: Routes=[
+   { path:'', component:HomeComponent },
+   { path:'cv', component:CvComponent }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +29,14 @@ import { ExperienceService } from './services/experience.service';
     LanguagesComponent,
     EducationComponent,
     ExperienceComponent,
-    SkillsComponent
+    SkillsComponent,
+    CvComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     ProfilService,
