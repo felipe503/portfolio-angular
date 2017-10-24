@@ -1,5 +1,8 @@
 $primary-color: #ff0000
-$url: "../../../assets/images/redriver72.jpg"
+$url: "../../../assets/images/redriver72-web.jpg"
+$font-phone: "min-width : 400px"
+$font-medium: "min-width : 740px"
+$font-large: "min-width : 940px"
 
 .full-background
   position: absolute
@@ -17,4 +20,21 @@ $url: "../../../assets/images/redriver72.jpg"
       top: 200px
       color: white
       text-transform: uppercase
-      font-size: 5em
+      font-size: 2em
+      font-style: italic
+
+@media screen and ( #{$font-phone} )
+  .full-background
+    div
+      h1
+        font-size: 3em
+@media screen and ( #{$font-medium} )
+  .full-background
+    div
+      h1
+        font-size: 4em
+@media screen and ( #{$font-large} )
+  .full-background
+    div
+      h1
+        font-size: 6em

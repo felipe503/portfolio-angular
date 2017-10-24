@@ -1,5 +1,6 @@
 $border-color: rgba(0,0,0,0.08)
 $transparent-hover: rgba(0,0,0,0.08)
+$navbar-link: rgba(0,0,0,0.5)
 .navbar-default
   background-color: $border-color
   border-color: $border-color
@@ -8,5 +9,13 @@ $transparent-hover: rgba(0,0,0,0.08)
     &:hover
       border-color: $border-color
       background-color: $transparent-hover
+    &:active
+      background-color: $transparent-hover
   .navbar-collapse
     border-color: $border-color
+  .navbar-nav
+    &>li
+      &>a
+        color: $navbar-link
+        &:hover
+          color: black
