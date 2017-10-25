@@ -16,25 +16,35 @@ $font-large: "min-width : 940px"
   top: 0
   z-index: -1
   div
+    position: relative
+    top: 200px
+    color: white
+    font-family: 'Comfortaa', cursive
     h1
-      position: relative
-      top: 200px
-      color: white
       font-size: 2em
-      font-family: 'Comfortaa', cursive
-
+    p
+      font-size: 1.5em
+      a
+        color: white
+        text-decoration: underline
 @media screen and ( #{$font-phone} )
   .full-background
     div
       h1
         font-size: 3em
+      p
+        font-size: 1.5em
 @media screen and ( #{$font-medium} )
   .full-background
     div
       h1
         font-size: 4em
+      p
+        font-size: 2em
 @media screen and ( #{$font-large} )
   .full-background
     div
       h1
         font-size: 6em
+      p
+        font-size: 2em
